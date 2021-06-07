@@ -13,6 +13,9 @@ ELSE
 	MESSAGEBOX("Não foi possivel iserir os dados..",64,"ERRO")
 ENDIF 
 
+*SELECT  no, nome, esaldo FROM cl WHERE  nome= xnome order by nome into cursor xbc
+
+
 *SELECT cl
 *INSERT INTO bc(titular,nmtitular,ctnm,iban,saldo,dtdp) VALUES (cl.nome,cl.idcl,cl.ctnm,cl.iban,0000,DATETIME( ))
 	

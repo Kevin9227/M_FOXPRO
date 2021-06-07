@@ -1,5 +1,4 @@
-SCAN 
-GO TOP
+
 SELECT bc
 APPEND BLANK
 SELECT cl
@@ -13,7 +12,7 @@ IF !EMPTY(cl.nome)
 ELSE
 	MESSAGEBOX("Não foi possivel iserir os dados..",64,"ERRO")
 ENDIF 
-ENDSCAN 
+
 *SELECT cl
 *INSERT INTO bc(titular,nmtitular,ctnm,iban,saldo,dtdp) VALUES (cl.nome,cl.idcl,cl.ctnm,cl.iban,0000,DATETIME( ))
 	
