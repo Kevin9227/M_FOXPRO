@@ -1,0 +1,44 @@
+		Arquivo E:\_SISTEMASVFP\EXEMPLO\MENUS\VENDAS.txt
+		Estrutura do Menu VENDAS.txt
+		Data: 03/02/2000  hora: 16:46:01hs
+
+
+
+Cadastro operacional                    
+     Clientes...                             		CHAMA(CAD_CLI)
+     Vendedores...                           		CHAMA(CAD_VEND)
+     ------                                  		
+     Produtos...                             		CHAMA(CAD_PROD)
+     ------                                  		
+     Cargos...                               		CHAMA(CAD_CARGO)
+
+Editar                                  
+     ------                                  		
+     ------                                  		
+
+Vendas                                  
+     Lançamentos de vendas...                		CHAMA(LANÇA_VENDAS)
+
+Consultas                               
+     Pedidos                                 		
+          Por código...                           		CHAMA(PESQ_COD_PED)
+          Por período...                          		CHAMA(PESQ_PERIODO)
+     ------                                  		
+     Clientes por Nome...                    		CHAMA(PESQ_NOME_CLI)
+     Vendedores por Nome...                  		CHAMA(PESQ_NOME_VEND)
+     ------                                  		
+     Produtos                                		
+          Por código...                           		CHAMA(PESQ_COD_PROD)
+          Por descrição...                        		CHAMA(PESQ_NOME_PROD)
+
+Relatórios                              
+     Relatórios...                           		CHAMA(RELATORIOS)
+
+Sobre                                   
+     Sobre o programa...                     		CHAMA(SOBRE)
+
+Sair                                    
+     Sair do programa                        		CLEAR EVENTS
+
+
+	Fim 

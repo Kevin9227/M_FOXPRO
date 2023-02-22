@@ -1,0 +1,22 @@
+PROCEDURE calc
+PUBLIC artigos
+SELECT venda
+
+
+
+GO TOP 
+tt=0
+artigos=0
+SCAN 
+	artigos=artigos+Venda.Qtt 
+	TT =tt+Venda.total
+	ENDSCAN 
+*SELECT st
+pos.frm_1.txt_sub.value =tt 
+thisform.Lb_9.Caption=cast(artigos as varchar(150)) 
+pos.frm_1.Txt_iva.Value =cast((tt*m.txiva/100) AS DOUBLE(2))
+m.ttiva=pos.frm_1.Txt_iva.Value
+pos.frm_1.Txt_total.value=tt+pos.frm_1.Txt_iva.Value
+pos.frm_1.Txt_1.value=tt+pos.frm_1.Txt_iva.Value
+RETURN calc 
+ENDPROC 

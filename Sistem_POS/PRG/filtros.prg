@@ -1,0 +1,92 @@
+**** FILTROS DE LISTAGENS ***********
+PARAMETERS LECRA
+LECRA=''
+
+IF nm ='spc'
+
+		IF USED('ST')  = .T.
+			SELECT ST
+		ELSE
+			USE C:\POS\DB\ST
+		ENDIF
+			BUSCARPRODUTO(M)
+		SELECT XBUSCA
+		TESTE=RECCOUNT() 
+	
+		IF TESTE  >1
+			DO FORM SLISTAGEM.SCX
+			IF TESTE=0
+				IF M="#"
+					RETURN
+				ELSE
+					MESSAGEBOX("Não existe Produto com esta descrição."+CHR(13)+"Por favor tente novamente",0+64,"ATENÇÃO")
+					RETURN
+				ENDIF
+			ELSE
+				SELECT XBUSCA
+			ENDIF
+		ENDIF
+		
+		ELSE
+		IF nm ='sft'
+			IF USED('SFT')  = .T.
+				SELECT FT
+							BUSCARFATURA(nu)
+
+			ELSE
+				*USE C:\POS\DB\ft
+				
+			ENDIF
+			IF nu!=0
+			BUSCARFATURA(nu)
+			SELECT XBUSCA
+			TESTE=RECCOUNT() 
+			
+			IF TESTE  >1
+				DO FORM SLISTAGEM.SCX
+				ELSE 
+				IF TESTE < 1
+				MESSAGEBOX("Não existe Fatura com este numero."+CHR(13)+"Por favor tente novamente",0+64,"ATENÇÃO")
+				RETURN .f.
+				ELSE
+						 
+					ENDIF 
+			ENDIF
+			
+			ELSE
+			RETURN .f.
+			ENDIF 
+
+
+			
+ENDIF 
+ENDIF 
+
+
+FUNCTION BUSCARPRODUTO
+	LPARAMETERS NOMEPRODUTO
+	NOMEPRODUTO = '%' + NOMEPRODUTO + '%'
+	SELECT  P.REF, P.DESCRI,P.PV1,P.STOCK,P.CODIGO	FROM ST P	WHERE  DESCRI LIKE NOMEPRODUTO  INTO CURSOR XBUSCA
+	RETURN 
+ENDFUNC 
+
+
+
+	
+
+*!*		BUSCARFATURA(NU,NO)
+*!*		SELECT XBUSCA
+*!*		
+*!*	DO FORM C:\POS\LISTAGEM.SCX
+*!*	select ft 
+*!*	GO TOP 
+*!*	thisform.refresh 
+
+	FUNCTION  BUSCARFATURA
+		LPARAMETERS NUMEROFT,NOMECLIENTE
+		UMEROFT = NUMEROFT 
+		**NOMECLIENTE = '%' + NOMECLIENTE+ '%'
+		SELECT  P.NMDOC, P.IDFT,P.NOME,P.FTDATA,P.TOTAL	FROM FT P WHERE  P.idft=NUMEROFT  INTO CURSOR XBUSCA 
+		RETURN 
+	ENDFUNC 
+

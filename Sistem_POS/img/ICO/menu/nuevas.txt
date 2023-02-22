@@ -1,0 +1,30 @@
+bill.ico
+Receipt.ico
+Billing.ico
+Ledger.ico
+Budget.ico
+Shopping Bag.ico
+Rent.ico
+Real Estate.ico
+Trolley.ico
+Sell Stock.ico
+Router.ico
+Cloud Checked.ico
+Upload to the Cloud.ico
+Present.ico
+Query Outer Join Right.ico
+Connected.ico
+Delete Table.ico
+Move Node Down.ico
+Server.ico
+Keypad.ico
+Foam Bubbles.ico
+Bubble.ico
+Interior.ico
+Error.ico
+Template.ico
+High Importance.ico
+Data Protection.ico
+Protect.ico
+Name Tag.ico
+Sheet Metal.ico
