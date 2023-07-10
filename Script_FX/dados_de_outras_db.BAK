@@ -20,7 +20,7 @@ idcl=curpar.u_idcli
 *****************************************
 ** Ver quais as lojas
 *****************************************
-m_Url="https://tuaURL.com/"+Alltrim(idcl)+"/getStores"
+m_Url="https://ncsync.novoscanais.com/"+Alltrim(idcl)+"/getStores"
 
 *******************************************************************************
 ** Limpar Cache
